@@ -1,6 +1,6 @@
 # bitcanary
 
-BitCanary is a REST API for service healthchecks. Instead of treating health pages as a source of truth for overall application health, it's a simple tool to help diagnose where a failure occured. An HTTP POST tells bitcanary a service is alive and well, and if a service dies, the monitor app can HTTP DELETE the canary to notify that the service has failed its health check.
+BitCanary is a canary endpoint REST api for service checks status. Instead of treating health pages as a source of truth for overall application health, a canary reports if a service check fails. An HTTP POST tells bitcanary a service is alive and well, and if a service dies, DELETE the canary to notify that the service has failed. A canary can also be used by a load balancer because it returns HTTP success and error codes.
 
 ## Examples
 Make a new canary endpoint
